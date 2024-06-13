@@ -3,7 +3,7 @@ import NavBar from "./NavBar";
 import Logo from '../assets/images/LOGO.png';
 import '../sass/_layout.scss';
 
-const Layout = ({ Children }) => {
+const Layout = ({ children }) => {
     const Header = () => {
         return (
             <header>
@@ -27,7 +27,7 @@ const Layout = ({ Children }) => {
         <div>
             <Header/>
             <main>
-                {Children}
+                {children}
             </main>
             <Footer/>
         </div>

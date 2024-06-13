@@ -1,4 +1,5 @@
-$color-primary : #fff;
-$color-secondary : #ff6060;
-$color-tertiary : #f6f6f6;
-$color-quaternary : #000000;
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <Layout>
             <main>
-                <Banner image={homeBanner}></Banner>
+                <Banner image={homeBanner} texte="Chez vous, partout et ailleurs"></Banner>
             </main>
         </Layout>
     )

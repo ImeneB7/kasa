@@ -1,0 +1,18 @@
+@import './main.scss';
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Logo-kasa {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 40px;
+    margin-left: 70px;
+}
+
+.nav-space {
+    padding-right: 290px;
+}

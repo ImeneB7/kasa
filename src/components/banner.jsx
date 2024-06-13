@@ -1,8 +1,11 @@
+import React from "react";
+import '../sass/_banner.scss';
 
-const Banner = () => {
+
+function Banner ({image, texte}) {
     return (
-        <div>
-
+        <div className="banner">
+            <img className="banner__img" src="{image}" alt="Bannière" />
         </div>
     )
 }

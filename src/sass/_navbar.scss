@@ -1,0 +1,15 @@
+@import './main.scss';
+@import './utils/mixins';
+@import './utils/variables';
+
+ul {
+    display: flex; 
+    position: absolute ;
+    gap: 57px;
+    margin-top: 70px;
+}
+
+li{
+    font-size: 24px;
+    list-style: none;
+}

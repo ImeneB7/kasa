@@ -1,0 +1,15 @@
+@import './main';
+
+.gallery_container {
+    background-color: $color-tertiary;
+    width: 90%;
+    height: 380vh;
+    padding: 50px;
+    gap : 60px;
+    flex-wrap: wrap;
+    border-radius: 25px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "./NavBar";
 import Logo from '../assets/images/LOGO.png';
+import LogoFooter from '../assets/images/LogoFooter.png'
 import '../sass/_layout.scss';
 
 const Layout = ({ children }) => {
@@ -18,7 +19,8 @@ const Layout = ({ children }) => {
     const Footer = () => {
         return (
             <footer>
-
+                <img src={LogoFooter} alt="Logo Kasa" className="Logo-Footer"></img>
+                <p>© 2020 Kasa. All rights reserved</p>
             </footer>
         )
     }

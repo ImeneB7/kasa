@@ -1,0 +1,51 @@
+@import './utils/variables';
+@import './main';
+
+.collapse {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-secondary;
+    color: $color-primary;
+    width: 70%;
+    height: 50px;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+
+
+    .header-collapse  {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .collapse-arrow {
+        height: auto;
+        margin-right: 20px;
+        margin-top: 0px;
+    }
+
+    .collapse-content {
+        background-color: $color-quaternary;
+        padding: 10px;
+        display: none;
+        height: 80px;
+        font-size: 18px;
+    }
+
+    &.open {
+        width: 70%;
+        height: 120px;
+        .collapse-content {
+        color: $color-quaternary;   
+        background-color: $color-tertiary;
+        display: block; 
+        }
+        
+    }
+    
+}

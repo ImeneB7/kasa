@@ -1,4 +1,4 @@
-@import './main';
+
 @import './utils/variables';
 
 .card {
@@ -11,6 +11,15 @@
     left: 8px;
     border-radius: 10px;
     overflow: hidden;
+
+    @media (max-width: 768px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 240px;
+        height: 240px;
+        margin-right: 2vh;
+    }
     
     
     img {

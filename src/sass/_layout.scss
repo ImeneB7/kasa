@@ -1,4 +1,4 @@
-@import './main.scss';
+
 @import './utils/variables';
 @import './utils/mixins';
 
@@ -7,15 +7,22 @@ header {
     display: flex;
     justify-content: space-between;
     
+
     .Logo-kasa {
     display: flex;
     justify-content: flex-start;
     margin-top: 40px;
     margin-left: 75px;
+    
+    @media (max-width: 768px) {
+        width: 145px;
+        margin-left: 5%;
+        padding-right: 5%;
+    }
     }
 
     .nav-space {
-    padding-right: 290px;
+    padding-right: 43vb;
     }
 
 }
@@ -24,11 +31,15 @@ header {
 
 footer {
     @include center;
-    margin-top: 10vh;
+    margin-top: 10px;
     width: 100%;
     height: 210px;
     display: flex;
     background-color: $color-quaternary;
+
+    @media (max-width: 768px) {
+        margin-top: 25vh;
+    }
 
     .Logo-Footer {
         width: 120px;
@@ -43,6 +54,17 @@ footer {
         font-size: 24px;
         font-weight: 500;
         line-height: 35px;
+
+        @media (max-width: 768px) {
+            text-align: center;
+            margin-top: 70px;
+            font-size: 15px;
+            width: 120px;
+            line-height: 20px;
+        }
     }
 
 }
+
+
+

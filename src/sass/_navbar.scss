@@ -1,4 +1,4 @@
-@import './main.scss';
+
 @import './utils/mixins';
 @import './utils/variables';
 
@@ -7,9 +7,24 @@ ul {
     position: absolute ;
     gap: 57px;
     margin-top: 70px;
-}
 
-li{
+    @media (max-width : 768px) {
+        gap: 20px;
+        margin-left: 2vh;
+        margin-top: 50px;
+    }
+    
+    li{
     font-size: 24px;
     list-style: none;
+
+    @media (max-width : 768px) {
+        font-size: 15px;
+        
+    }
 }
+   
+}
+
+    
+

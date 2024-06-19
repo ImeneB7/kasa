@@ -6,7 +6,7 @@ import Gallery from "../components/Gallery";
 
 const Home = () => {
     return (
-        <Layout>
+        <Layout >
             <main>
                 <Banner image={homeBanner} texte="Chez vous, partout et ailleurs"></Banner>
                 <Gallery></Gallery>

@@ -1,5 +1,5 @@
 @import './utils/variables';
-@import './main';
+
 
 .collapse {
     position: relative;
@@ -12,6 +12,12 @@
     margin: auto;
     margin-bottom: 20px;
     border-radius: 5px;
+
+    @media (max-width: 768px) {
+        width: 90%;
+        margin-bottom: 40px;
+        
+    }
 
 
     .header-collapse  {
@@ -35,6 +41,11 @@
         display: none;
         height: 80px;
         font-size: 18px;
+
+        @media (max-width: 768px) {
+            font-size: 15px;
+            height: 100px;
+        }
     }
 
     &.open {
@@ -46,6 +57,10 @@
         display: block; 
         }
         
+        @media (max-width: 768px) {
+            width: 90%;
+            margin-bottom: 50px;
+        }
     }
     
 }

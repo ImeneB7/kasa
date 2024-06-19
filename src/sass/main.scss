@@ -1,0 +1,24 @@
+@import './utils/variables';
+@import './utils/mixins';
+@import './banner';
+@import './card';
+@import './collapse';
+@import './gallery';
+@import './housing';
+@import './layout';
+@import './navbar';
+@import './notfound404';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+a {
+    display: flex;
+    text-decoration: none;
+    color: $color-quaternary;
+}

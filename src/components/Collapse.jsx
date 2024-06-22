@@ -4,7 +4,7 @@ import arrowUp from '../assets/icons/arrow_up.png';
 import { useState } from 'react'; //importer le Hook pour gérer l'état du composant//
 
 
-function Collapse ({title, content}) {
+function Collapse ({title, content, children}) {
     const [isOpen, setIsOpen] = useState(false);
 /** évènement qui permets de passer d'un état à un autre */
     const toggleCollapse  =() => {setIsOpen(!isOpen);} 
@@ -17,7 +17,7 @@ function Collapse ({title, content}) {
             </div>
             
                 <div className='collapse-content'>
-                    {content}
+                    {content || children}
                 </div>
             
         </div>

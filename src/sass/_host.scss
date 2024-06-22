@@ -1,0 +1,52 @@
+@import '../sass/utils/variables';
+
+.host {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin-bottom: 50px;
+
+    .host-info {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        text-align: right;
+        margin-right: 12vh;
+        
+        .host-name {
+        max-width: 100px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 26px;
+        color: $color-secondary;
+        text-align: right;
+        margin-right: 10px;
+     }
+
+        .host-img {
+            width: 64px;
+            height: 64px;
+            border-radius: 50px;
+            margin-left: 15px;
+        }
+
+    }
+
+    .rating {
+        display: flex;
+        justify-content: flex-end;
+        text-align: right;
+        margin-top: 20px;
+        margin-right: 12vh;
+
+        img {
+            margin-right: 10px;
+        }
+    }
+
+    
+
+}
+
+
+

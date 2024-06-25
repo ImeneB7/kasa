@@ -1,15 +1,7 @@
 
 @import './utils/variables';
 
-.card_link {
-    display: block;
-    width: fit-content;
-    text-decoration: none;
 
-    @media (max-width: 576px) {
-        height: fit-content;
-    }
-}
 
 
 .card {
@@ -24,14 +16,28 @@
     border-radius: 10px;
     overflow: hidden;
     
+    @media (max-width: 576px) {
+        width: 200px;
+        height: 200px;
+        top: 25px;
+        left: 15%;
+    }
 
-    @media (max-width: 768px) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    @media (min-width:576px) and (max-width: 768px) {
         width: 240px;
         height: 240px;
+        top: 35px;
+        left: 20px;
     }
+
+    @media (min-width:768px) and (max-width: 992px) {
+        width: 280px;
+        height: 280px;
+        top: 25px;
+        left: 10%;
+    }
+
+    
     
     
     img {
@@ -50,5 +56,13 @@
         font-style: Montserrat;
     }
 
-    
+    .card_link {
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+
+    @media (max-width: 576px) {
+        height: fit-content;
+    }
+}
 }

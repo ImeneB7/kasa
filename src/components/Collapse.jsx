@@ -1,6 +1,5 @@
 import '../sass/_collapse.scss';
-import arrowDown from '../assets/icons/arrow_down.png';
-import arrowUp from '../assets/icons/arrow_up.png';
+import arrow from '../assets/icons/arrow_up.png';
 import { useState } from 'react'; //importer le Hook pour gérer l'état du composant//
 
 
@@ -13,7 +12,7 @@ function Collapse ({title, content, children}) {
         <div className={`collapse ${isOpen ? 'open' : ''}`}>             {/** si 'isOpen' est true alors le classname sera collapse open, si false alors le classname sera collapse*/}
             <div className= "header-collapse" onClick={toggleCollapse}>
                 <h3>{title}</h3>
-                <img className='collapse-arrow'  src={isOpen ? arrowDown : arrowUp} alt="Flèche de direction" /> {/** si isOpen est true alors arrowDown mais si false alors arrowUp  */}
+                <img className='collapse-arrow'  src={arrow} alt="Flèche de direction" /> {/** si isOpen est true alors arrowDown mais si false alors arrowUp  */}
             </div>
             
                 <div className='collapse-content'>

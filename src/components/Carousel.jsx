@@ -9,7 +9,7 @@ function Carousel ({pictures}) {
     const nextImg= () => {
         let newIndex = currentIndex + 1;
         if (newIndex === pictures.length ) {
-            newIndex= 0;
+            newIndex= 0;  // retour à la première image du carousel
         }
             setCurrentIndex(newIndex)
     }
@@ -17,13 +17,13 @@ function Carousel ({pictures}) {
     const prevImg = () => {
         let newIndex = currentIndex - 1;
         if(newIndex < 0) {
-            newIndex = pictures.length - 1;
+            newIndex = pictures.length - 1; // retour de la première à la dernière image du carousel
         }
             setCurrentIndex(newIndex)
     }
 
 
-    if (pictures.lenght === 1) {
+    if (pictures.lenght === 1) { // si le carousel contient une seule image il n'affiche que celle ci
         return (
             <div className="Carousel">
                 <img src={pictures[0]} alt={`Slide`} />
@@ -35,11 +35,28 @@ function Carousel ({pictures}) {
 
     return (
         <div className='Carousel'>
-            <img src={arrowLeft} alt="Previous" onClick={prevImg} className='carousel-arrow carousel-arrow-left'>
+            {pictures.length > 1 && ( // les flèches de navigation dans le carousel apparaissent que si il y a plusieurs images
+                <>
+            <img 
+            src={arrowLeft} 
+            alt="Previous" 
+            onClick={prevImg} 
+            className='carousel-arrow carousel-arrow-left'>
             </img>
-            <img src={pictures[currentIndex]} alt={`Slide ${currentIndex}`} />
-            <img src={arrowRight} alt="Next" onClick={nextImg} className='carousel-arrow carousel-arrow-right'>
+            <img 
+            src={arrowRight} 
+            alt="Next" 
+            onClick={nextImg} 
+            className='carousel-arrow carousel-arrow-right'>
             </img>
+            </>
+            
+        )} 
+        <div className='counter'>
+            {currentIndex + 1} / {pictures.length}
+        </div>
+        {/** image actuelle dans le carousel */}
+        <img src={pictures[currentIndex]} alt={`Slide ${currentIndex}`} /> 
         </div>
     )
 }

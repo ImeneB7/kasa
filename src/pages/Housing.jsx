@@ -12,10 +12,10 @@ import Carousel from '../components/Carousel';
 
 function Housing() {
 
-     const {id} = useParams();
+     const {id} = useParams(); // je recupére l'id de l'url actuelle
      console.log('ID récupéré:', id)
 
-     const logement = data.find((item)  => item.id === id);
+     const logement = data.find((item)  => item.id === id); 
      console.log('Logement trouvé:', logement)
 
 

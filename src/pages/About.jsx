@@ -1,5 +1,4 @@
 import React from "react";
-import Layout from "../components/Layout";
 import Banner from "../components/Banner";
 import aboutBanner from '../assets/images/Image source 2.png'
 import Collapse from "../components/Collapse";
@@ -13,7 +12,6 @@ import Collapse from "../components/Collapse";
 
 const About = () => {
     return (
-        <Layout>
             <main >
                 <Banner image={aboutBanner}></Banner>
                 <section>
@@ -23,7 +21,6 @@ const About = () => {
                     
                 </section>
             </main>
-        </Layout>
     )
 }
 

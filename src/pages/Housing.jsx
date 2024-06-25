@@ -6,7 +6,6 @@ import { useParams } from 'react-router-dom';
 import Tags from '../components/Tag';
 import Rating from '../components/Rating';
 import Host from '../components/Host';
-import Layout from '../components/Layout';
 import Carousel from '../components/Carousel';
 
 
@@ -27,7 +26,7 @@ function Housing() {
      console.log('Équipements:', logement.equipments)
 console.log('logement:', logement);
      return (
-        <Layout>
+        
         <div className='logement_wrapper'>
             <Carousel pictures={logement.pictures}></Carousel>
             <div className='house-info'>
@@ -53,10 +52,11 @@ console.log('logement:', logement);
                 </ul>
                 </div> 
                 </Collapse>
+                
             </div>
         </div>
         </div>
-        </Layout>
+        
      )
 }
 

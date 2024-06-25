@@ -1,0 +1,44 @@
+
+@import './utils/variables';
+@import './utils/mixins';
+
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1240px;
+    margin: auto;
+
+    .Logo-kasa {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 40px;
+    margin-left: 0;
+    
+    
+    @media (max-width: 768px) {
+        width: 145px;
+        margin-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 50px;
+    }
+
+    @media (max-width: 1024px) {
+        margin-left: 5%;
+    }
+
+    
+
+    }
+
+    .nav-space {
+    padding-right: 43vb;
+
+    @media (max-width: 768px) {
+        padding-right: 30vh;
+        padding-left: 0;
+    }
+    }
+
+}

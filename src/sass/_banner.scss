@@ -5,17 +5,21 @@
     @include center;
     position: relative;
     height: 220px;
-    width: 90%;
+    width: 1240px;
     border-radius: 25px;
     padding: 20px;
     margin: 45px auto;
     overflow: hidden;
 
     @media (max-width: 768px) {
-        
         height: 100px;
         border-radius: 10px;
         max-width: 90%;
+        margin-top: 0;
+    }
+
+    @media (max-width: 1024px) {
+        width: 905px;
     }
 
     

@@ -5,98 +5,171 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    background-color: $color-secondary;
     color: $color-primary;
     width: 70%;
-    height: 50px;
+    height: auto;
     margin: auto;
     margin-bottom: 20px;
-    border-radius: 5px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 576px) {
         width: 90%;
         margin-bottom: 40px;
-        
     }
 
 
     .header-collapse  {
+        border-radius: 5px;
+        background-color: $color-secondary;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 10px;
         font-size: 24px;
         cursor: pointer;
+        max-height: 50px;
+
+        @media (max-width: 576px) {
+            font-size: 18px;
+            font-family: 'Montserrat';
+            line-height: 19px;
+        }
     }
 
     .collapse-arrow {
         height: auto;
         margin-right: 20px;
         margin-top: 0px;
+        transition: transform 0.3s ease;
     }
 
     .collapse-content {
         background-color: $color-quaternary;
         padding: 10px;
         display: none;
-        height: 80px;
+        height: 180px;
         font-size: 18px;
+        overflow: hidden;
+        
 
-        @media (max-width: 768px) {
+        @media (max-width: 576px) {
             font-size: 15px;
-            height: 100px;
         }
     }
 
     &.open {
+        background-color: $color-tertiary;
         width: 70%;
-        height: 120px;
+    
         .collapse-content {
         color: $color-quaternary;   
         background-color: $color-tertiary;
         display: block; 
+        max-height: 200px;
+        animation: fadeIn 0.5s ease forwards;
         }
         
-        @media (max-width: 768px) {
+        @media (max-width:576px) {
             width: 90%;
             margin-bottom: 50px;
+            height: auto;
+        }
+
+        @media (min-width: 576px) and (max-width: 1023px) {
+            height: auto;
+        }
+
+        @media (min-width: 1024px) {
+            height: auto;
+        }
+
+        .collapse-arrow {
+            transform: rotate(-180deg);
+        }
+
+    }
+
+    
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
         }
     }
+
+
     
 }
 
+///////////////////// COLLAPSE POUR PAGE HOUSING ///////////////////////
+
 .logement_collapse {
+    position: relative;
+    bottom: 100px;
+    max-height: 10px;
+    margin-bottom: 180px;
 
-    margin-bottom: 200px;
+    .collapse-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 20px;
+        gap: 50px;
+        width: 100%;
+        
 
-.collapse-group {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 20px;
-    gap: 50px;
-    width: 100%;
-    
-
-    .custom-collapse-content {
-        .collapse-content {
-            padding: 50px;
+        @media (max-width: 576px) {
+            margin-top: 50px;
+            flex-wrap: wrap;
+            width: auto;
+            margin-right: 70%; 
+            
+            .collapse { 
+                font-size: 14px;
+                height: auto;
+            }
         }
+
+        @media (min-width: 576px) and (max-width: 1024px){
+            flex-wrap: wrap;
+            margin-right: 30%;
+        }
+} 
+
+.open {
+    height: auto;
+    .collapse-content {
+        display: block;
+        padding: 15px;
+        max-height: auto;
+        z-index: 1;
+        }
+
         ul {
             display: flex;
             list-style: none;
             flex-direction: column;
             padding: 0;
             margin: 0;
+            height: auto;
 
             li {
                 margin-bottom: -50px;
                 font-size: 18px;
+
+                @media (max-width: 576px) {
+                    padding: 0;
+                    margin: 0;
+                    font-size: 16px;
+                    line-height: 2px;
+                }
             }
-        }
+        
     }
 }
 
 
-
+ 
 }

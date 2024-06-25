@@ -1,7 +1,7 @@
 @import './utils/variables';
 
 .house-info {
-    margin-left: 100px;
+    margin-left: 90px;
 
     h1 {
         color: $color-secondary;
@@ -15,4 +15,40 @@
         font-size: 18px;
         line-height: 26px;
     }
+
+   @media (max-width:576px){
+    margin-top: 50px;
+    margin-left: 20px;
+
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+   }
+
+   @media (min-width: 577px) and (max-width: 768px) {
+    margin-top: 30px;
+    margin-left: 40px;
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+   }
+
+   @media (min-width: 769px) and (max-width: 1023px) {
+    margin-left: 40px;
+   }
+
+   @media (min-width: 1024px) {
+
+    margin-left: 50px;
+
+   }
 }

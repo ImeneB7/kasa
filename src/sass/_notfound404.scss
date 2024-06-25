@@ -9,24 +9,42 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding-bottom: 4.1vh;
     color: $color-secondary;
+    margin-bottom: 145px;
+
+    @media (max-width: 768px) {
+        margin-bottom: 18%;
+    }
+    @media (min-width: 1024px) {
+        margin-bottom: 15%;
+    }
+
 
     &_404 {
-        font-family: 'Montserrat';
         font-size: 200px;
+
+        @media (max-width:576px) {
+            margin-top: 30px;
+            font-size: 150px;
+        }
     }
 
     &_content {
         font-size: 36px;
+        
+        @media (max-width: 576px){
+        margin-top: 80px;
+        font-size: 24px;
+        text-align: center;
+    }
     }
 
     &_link {
-        margin-top: 90px;
+        margin-top: 60px;
         font-size: 18px;
         text-decoration: underline;
         font-weight: 500;
-        font-family: 'Montserrat';
     }
+
 }
 

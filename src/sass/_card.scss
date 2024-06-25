@@ -1,8 +1,20 @@
 
 @import './utils/variables';
 
+.card_link {
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+
+    @media (max-width: 576px) {
+        height: fit-content;
+    }
+}
+
+
 .card {
     position: relative;
+    justify-content: center;
     display: flex;
     flex-wrap: wrap;
     width: 340px;
@@ -11,6 +23,7 @@
     left: 8px;
     border-radius: 10px;
     overflow: hidden;
+    
 
     @media (max-width: 768px) {
         display: flex;
@@ -18,7 +31,6 @@
         align-items: center;
         width: 240px;
         height: 240px;
-        margin-right: 2vh;
     }
     
     

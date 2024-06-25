@@ -1,5 +1,16 @@
-.tags {
+@import './utils/variables';
+
+.tags-info {
     display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+    .tags {
+        display: inline-block;
+        background-color: $color-secondary;
+        color: $color-primary;
+        padding: 5px 15px;
+        border-radius: 10px;
+        margin-right: 10px;
+    }
 }

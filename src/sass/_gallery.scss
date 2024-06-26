@@ -2,7 +2,11 @@
 
 .gallery_container {
     background-color: $color-tertiary;
-    max-width: 1240px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    /*max-width: 1240px;
     height: 380vh;
     padding: 50px;
     gap : 60px;
@@ -33,7 +37,7 @@
         height: auto;
         gap: 50px;
         padding: 40px;
-    }
+    }*/
 
     @media (max-width: 992px) {
         background-color: $color-primary;

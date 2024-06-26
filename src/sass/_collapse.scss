@@ -51,7 +51,7 @@
         background-color: $color-quaternary;
         padding: 10px;
         display: none;
-        height: 180px;
+        height: auto;
         font-size: 18px;
         overflow: hidden;
         
@@ -69,7 +69,7 @@
         color: $color-quaternary;   
         background-color: $color-tertiary;
         display: block; 
-        max-height: 200px;
+        max-height: none;
         animation: fadeIn 0.5s ease forwards;
         }
         
@@ -112,53 +112,61 @@
 
 .logement_collapse {
     position: relative;
-    bottom: 100px;
-    height: 10px;
-    max-width: auto;
-    margin-bottom: 280px;
-    margin-top: 30px;
+    bottom: 80px;
+    height: auto;
+    max-width: 1240px;
+    width: 90%;
+    margin: 30px auto 200px;
 
     .collapse-group {
         display: flex;
-        flex-direction: row;
         max-height: 10px;
-        max-width: 88%;
+        max-width: 1240px;
         margin: 0 auto;
+        gap: 20px;
+        
         
         .collapse {
-            flex: 1;
+            
+            flex: 1 1 48%;
            
             @media (max-width: 576px) {
-                width: 100%;
-                height: auto;
+                /*width: 100%;
+                height: auto;*/
+                flex: 1 1 100%;
+                margin-bottom: -30px;
+                
             }
 
             @media (min-width: 576px) and (max-width: 768px) {
-                width: 100%;
+                /*width: 100%;*/
+                flex: 1 1 100%;
+                margin-bottom: -30px;
+            }
+
+            @media (min-width: 768px) and (max-width:1024px) {
+                flex: 1 1 100%;
             }
         }
         
-
-
-        @media (min-width: 576px) and (max-width: 768px){
-            flex-wrap: wrap;
-            margin-right: 30%;
-            margin: 0 auto;
-        }
-
         @media (max-width: 1024px) {
-            margin: auto;
+            
+            width: 100%;
         }
+
+
+        
 } 
 
-.open {
+/*.open {
     height: auto;
     
     .collapse-content {
         display: block;
         padding: 15px;
-        max-height: auto;
-        z-index: 1;
+        max-height: none;
+        z-index: 20;
+        
         }
 
         ul {
@@ -182,7 +190,7 @@
             }
         
     }
-}
+}*/
 
 
  

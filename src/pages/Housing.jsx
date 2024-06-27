@@ -7,7 +7,7 @@ import Tags from '../components/Tag';
 import Rating from '../components/Rating';
 import Host from '../components/Host';
 import Carousel from '../components/Carousel';
-
+import { useState} from 'react';
 
 
 function Housing() {
@@ -15,19 +15,29 @@ function Housing() {
      const {id} = useParams(); // je recupére l'id de l'url actuelle
      console.log('ID récupéré:', id)
 
+     /*const [collapseOpen, setCollapseOpen] = useState(false);*/
+     const [isDescriptionOpen, setIsDescriptionOpen] = useState(false);
+     const [isEquipmentsOpen, setIsEquipmentsOpen]= useState(false);
+
      const logement = data.find((item)  => item.id === id); 
      console.log('Logement trouvé:', logement)
 
 
-     if (!logement) {
-        return <NotFound404></NotFound404>
-     }
+     
      console.log('Description:', logement.description)
      console.log('Équipements:', logement.equipments)
-console.log('logement:', logement);
+     console.log('logement:', logement);
+
+
+if (!logement) {
+        return <NotFound404></NotFound404>
+     }
+
+     const isAnyCollapseOpen = isDescriptionOpen || isEquipmentsOpen;
      return (
-        
-        <div className='logement_wrapper'>
+
+        <div className={`logement_wrapper ${isAnyCollapseOpen ? 'with-open-collapse' : ''}`}>
+            <div >
             <Carousel pictures={logement.pictures}></Carousel>
             <div className='house-info'>
                 <h1>{logement.title}</h1>
@@ -35,28 +45,28 @@ console.log('logement:', logement);
                 <Tags tags={logement.tags}></Tags>
             </div>
             <div className='host'>
-                <Host className='host-img' host={logement.host}></Host>
+                <Host className='host-img host-name' host={logement.host}></Host>
                 <Rating rating={parseInt(logement.rating)}></Rating>
-                </div> 
+            </div>
+            </div> 
         <div className='logement_collapse' >
-            <div className='collapse-group'>
-                <Collapse title={'Description'} headerClassName='custom-header-collapse' contentClassName='custom-collapse-content'>
+            <div className='logement_group'>
+                <Collapse title='Description' setCollapseOpen={setIsDescriptionOpen}>
                 <p>{logement.description}</p>
                 </Collapse>
-                <Collapse title={'Équipements'} headerClassName='custom-header-collapse' contentClassName='custom-collapse-content'>
-                <div className='custom-collapse-content'> 
+                <Collapse title='Équipements' setCollapseOpen={setIsEquipmentsOpen}>
+                <div> 
                 <ul>
                     {logement.equipments.map((equipment, index) => (
                        <li key={index}>{equipment}</li> 
                     ))}
                 </ul>
                 </div> 
-                </Collapse>
-                
+                </Collapse> 
             </div>
         </div>
         </div>
-        
+
      )
 }
 

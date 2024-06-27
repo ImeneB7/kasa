@@ -1,12 +1,17 @@
 import '../sass/_collapse.scss';
 import arrow from '../assets/icons/arrow_up.png';
-import { useState } from 'react'; //importer le Hook pour gérer l'état du composant//
+import { useState, useEffect } from 'react'; //importer le Hook pour gérer l'état du composant//
 
 
-function Collapse ({title, content, children}) {
+function Collapse ({title, content, children, setCollapseOpen}) {
     const [isOpen, setIsOpen] = useState(false);
 /** évènement qui permets de passer d'un état à un autre */
     const toggleCollapse  =() => {setIsOpen(!isOpen);} 
+
+    useEffect(() => {
+        if (setCollapseOpen) {
+        setCollapseOpen(isOpen);}
+    }, [isOpen, setCollapseOpen])
 
     return (
         <div className={`collapse ${isOpen ? 'open' : ''}`}>             {/** si 'isOpen' est true alors le classname sera collapse open, si false alors le classname sera collapse*/}

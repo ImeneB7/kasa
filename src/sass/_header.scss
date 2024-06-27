@@ -4,40 +4,61 @@
 
 
 header {
-    width: 100%;
+    max-width: 90%;
     display: flex;
     justify-content: space-between;
-    max-width: 1240px;
     margin: auto;
+    flex-wrap: nowrap;
+    max-width: 1240px;
+
+    @media (max-width: 576px) {
+        padding: 0;
+        max-width: 90%;
+    }
+
+    @media (min-width: 576px) and (max-width:768px ){
+        max-width: 90%;
+    }
+
+    @media (min-width:768px) and (max-width: 1024px) {
+        max-width: 90%;
+    }
+
+    @media (min-width: 1024px) {
+        max-width: 88%;
+        
+    }
 
     .Logo-kasa {
     display: flex;
     justify-content: flex-start;
     margin-top: 40px;
-    margin-left: 0;
+    padding: 0;
     
+    @media (max-width:576px) {
+        padding-bottom: 20px;
+    }
     
     @media (max-width: 768px) {
-        width: 145px;
-        margin-left: 5%;
-        padding-right: 5%;
-        padding-bottom: 50px;
+        padding-bottom: 30px;
+        margin-left: 0;
     }
 
     @media (max-width: 1024px) {
-        margin-left: 5%;
+       margin-left: 0;
     }
 
-    
+    @media (min-width: 1024px) {
+        padding: auto;
+    }
 
     }
 
     .nav-space {
-    padding-right: 43vb;
+    padding: 0;
 
-    @media (max-width: 768px) {
-        padding-right: 30vh;
-        padding-left: 0;
+    @media (max-width: 576px) {
+        margin-left: -30px;
     }
     }
 

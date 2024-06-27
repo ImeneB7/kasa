@@ -4,6 +4,9 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 20px;
+    position: relative;
+    right: 15px;
+    gap: 10px;
 
     .tags {
         display: inline-block;

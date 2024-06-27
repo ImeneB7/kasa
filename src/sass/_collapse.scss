@@ -108,34 +108,49 @@
     
 }
 
-///////////////////// COLLAPSE POUR PAGE HOUSING ///////////////////////
+.logement_wrapper {
+    min-height: 100vh;
+
+    &.with-open-collapse {
+        padding-bottom: 220px;
+
+ 
+    }
+    
+}
 
 .logement_collapse {
-    position: relative;
-    bottom: 80px;
     height: auto;
     max-width: 1240px;
     width: 90%;
-    margin: 30px auto 200px;
+    margin: 30px auto 200PX;
 
-    .collapse-group {
+    .logement_group {
         display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
         max-height: 10px;
-        max-width: 1240px;
+        max-width: 1440px;
         margin: 0 auto;
         gap: 20px;
         
+        @media (min-width: 1024px) and (max-width: 1440px){
+            width: 100%;
+        }
         
         .collapse {
-            
+            height: auto;
             flex: 1 1 48%;
+
+            .collapse-content {
+                height: 180px;
+            }
            
             @media (max-width: 576px) {
                 /*width: 100%;
                 height: auto;*/
                 flex: 1 1 100%;
                 margin-bottom: -30px;
-                
             }
 
             @media (min-width: 576px) and (max-width: 768px) {
@@ -146,52 +161,29 @@
 
             @media (min-width: 768px) and (max-width:1024px) {
                 flex: 1 1 100%;
+
+                ul {
+                    line-height: 30px;
+                }
             }
+
+            @media (min-width:1024px) {
+                ul {
+                    line-height: 30px;
+                }
+            }
+
+
         }
         
         @media (max-width: 1024px) {
-            
             width: 100%;
+            flex-wrap: wrap;
         }
 
 
         
 } 
-
-/*.open {
-    height: auto;
-    
-    .collapse-content {
-        display: block;
-        padding: 15px;
-        max-height: none;
-        z-index: 20;
-        
-        }
-
-        ul {
-            display: flex;
-            list-style: none;
-            flex-direction: column;
-            padding: 0;
-            margin: 0;
-            height: auto;
-
-            li {
-                margin-bottom: -50px;
-                font-size: 18px;
-
-                @media (max-width: 576px) {
-                    padding: 0;
-                    margin: 0;
-                    font-size: 16px;
-                    line-height: 2px;
-                }
-            }
-        
-    }
-}*/
-
 
  
 }

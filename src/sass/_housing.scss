@@ -1,7 +1,7 @@
 @import './utils/variables';
 
 .house-info {
-    width: 80%;
+    width: 87%;
     margin: 0 auto;
 
     h1 {
@@ -16,10 +16,11 @@
         font-weight: 500;
         font-size: 18px;
         line-height: 26px;
+        margin-left: -20px;
     }
 
    @media (max-width:576px){
-    margin-top: 50px;
+    
     width: 80%;
 
     h1 {
@@ -45,8 +46,8 @@
    }
 
    @media (min-width: 769px) and (max-width: 1024px) {
-    width: 80%;
-
+    width: 85%;
+    
     h1{
         font-size: 32px;
     }

@@ -2,7 +2,7 @@
 
 .Carousel {
     position: relative;
-    width: 1240px;
+    width: 90%;
     height: 415px;
     margin: auto;
     margin-top: 50px;
@@ -14,15 +14,15 @@
         margin: 0 auto;
     }
 
-    @media (min-width: 576px) and (max-width: 996px) {
+    @media (min-width: 576px) and (max-width: 768px) {
         width: 90%;
         height: auto;
     }
 
-    @media (min-width: 996px) and (max-width: 1024px) {
+    @media (min-width: 768px) and (max-width: 1024px) {
         width: 90%;
         height: auto;
-        margin-bottom: 80px;
+        
     }
 
 

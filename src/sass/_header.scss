@@ -12,7 +12,6 @@ header {
     max-width: 1240px;
 
     @media (max-width: 576px) {
-        padding: 0;
         max-width: 90%;
     }
 
@@ -36,11 +35,13 @@ header {
     padding: 0;
     
     @media (max-width:576px) {
-        padding-bottom: 20px;
+        width: 145px;
+        padding-bottom: 30px;
     }
     
-    @media (max-width: 768px) {
-        padding-bottom: 30px;
+    @media (min-width:576px) and (max-width: 768px) {
+        width: 145px;
+        padding-bottom: 0px;
         margin-left: 0;
     }
 

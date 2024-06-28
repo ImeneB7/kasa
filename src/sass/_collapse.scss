@@ -109,21 +109,26 @@
 }
 
 .logement_wrapper {
+    position: relative;
+    height: auto;
     min-height: 100vh;
-
     &.with-open-collapse {
-        padding-bottom: 220px;
-
- 
+        padding-bottom: 350px;
     }
-    
+
+   @media (min-width: 576px) and (max-width: 1024px) {
+        margin-bottom: 12%;
+    }
+
 }
 
 .logement_collapse {
     height: auto;
     max-width: 1240px;
     width: 90%;
-    margin: 30px auto 200PX;
+    margin: 20px auto 200px ;
+
+    
 
     .logement_group {
         display: flex;
@@ -134,27 +139,46 @@
         margin: 0 auto;
         gap: 20px;
         
+        
+        @media (max-width: 768px) {
+            flex-wrap: wrap;
+            margin-top: -60px;
+        }
+
         @media (min-width: 1024px) and (max-width: 1440px){
             width: 100%;
         }
+
         
         .collapse {
             height: auto;
             flex: 1 1 48%;
+            margin-bottom: 20px;
 
             .collapse-content {
-                height: 180px;
+                height: auto;
+
+                ul {
+                    
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 0;
+                    
+                    li {
+                    font-size: 18px;
+                    line-height: 0;
+                }
+                }
+
+                
             }
            
             @media (max-width: 576px) {
-                /*width: 100%;
-                height: auto;*/
                 flex: 1 1 100%;
                 margin-bottom: -30px;
             }
 
             @media (min-width: 576px) and (max-width: 768px) {
-                /*width: 100%;*/
                 flex: 1 1 100%;
                 margin-bottom: -30px;
             }

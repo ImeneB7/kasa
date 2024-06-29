@@ -1,37 +1,44 @@
 import '../sass/_housing.scss';
 import data from '../data/data';
 import Collapse from '../components/Collapse';
-import NotFound404 from './NotFound404';
-import { useParams } from 'react-router-dom';
+
+import { useParams, useNavigate } from 'react-router-dom';
 import Tags from '../components/Tag';
 import Rating from '../components/Rating';
 import Host from '../components/Host';
 import Carousel from '../components/Carousel';
-import { useState} from 'react';
+import { useState, useEffect} from 'react';
 
 
 function Housing() {
 
      const {id} = useParams(); // je recupére l'id de l'url actuelle
      console.log('ID récupéré:', id)
+     const navigate = useNavigate();
 
      /*const [collapseOpen, setCollapseOpen] = useState(false);*/
      const [isDescriptionOpen, setIsDescriptionOpen] = useState(false);
      const [isEquipmentsOpen, setIsEquipmentsOpen]= useState(false);
 
      const logement = data.find((item)  => item.id === id); 
-     console.log('Logement trouvé:', logement)
+     
+    useEffect (() => {
+            if (!logement) {
+            navigate('/NotFound404');
+        }
+        }, [logement, navigate]);
 
+        if (!logement) {
+            return null;
+        }
 
      
      console.log('Description:', logement.description)
      console.log('Équipements:', logement.equipments)
      console.log('logement:', logement);
+    console.log('Logement trouvé:', logement)
+    
 
-
-if (!logement) {
-        return <NotFound404></NotFound404>
-     }
 
      const isAnyCollapseOpen = isDescriptionOpen || isEquipmentsOpen;
      return (
